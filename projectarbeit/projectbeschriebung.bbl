@@ -1,0 +1,40 @@
+\begin{thebibliography}{}
+
+\bibitem[Bollmann, 2018]{Bollmann2018}
+Bollmann, M. (2018).
+\newblock {\em Normalization of historical texts with neural network models}.
+\newblock doctoralthesis, Ruhr-Universit{\"a}t Bochum,
+  Universit{\"a}tsbibliothek.
+
+\bibitem[Bollmann, 2019]{bollmann-2019-large}
+Bollmann, M. (2019).
+\newblock A large-scale comparison of historical text normalization systems.
+\newblock In {\em Proceedings of the 2019 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 3885--3898,
+  Minneapolis, Minnesota. Association for Computational Linguistics.
+
+\bibitem[H{\"a}m{\"a}l{\"a}inen et~al., 2019]{hamalainen-etal-2019-revisiting}
+H{\"a}m{\"a}l{\"a}inen, M., S{\"a}ily, T., Rueter, J., Tiedemann, J., and
+  M{\"a}kel{\"a}, E. (2019).
+\newblock Revisiting {NMT} for normalization of early {E}nglish letters.
+\newblock In {\em Proceedings of the 3rd Joint {SIGHUM} Workshop on
+  Computational Linguistics for Cultural Heritage, Social Sciences, Humanities
+  and Literature}, pages 71--75, Minneapolis, USA. Association for
+  Computational Linguistics.
+
+\bibitem[Korchagina, 2017]{korchagina-2017-normalizing}
+Korchagina, N. (2017).
+\newblock Normalizing medieval {G}erman texts: from rules to deep learning.
+\newblock In {\em Proceedings of the {N}o{D}a{L}i{D}a 2017 Workshop on
+  Processing Historical Language}, pages 12--17, Gothenburg. Link{\"o}ping
+  University Electronic Press.
+
+\bibitem[Makarov and Clematide, 2020]{makarov-clematide-2020-semi}
+Makarov, P. and Clematide, S. (2020).
+\newblock Semi-supervised contextual historical text normalization.
+\newblock In {\em Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics}, pages 7284--7295, Online. Association for
+  Computational Linguistics.
+
+\end{thebibliography}

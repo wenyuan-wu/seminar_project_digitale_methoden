@@ -1,0 +1,77 @@
+\documentclass{scrartcl}
+\usepackage{fontspec}
+\usepackage{libertine}
+
+\usepackage[ngerman]{babel}
+
+\title{SE Digitale Methoden}
+\subtitle{Semesterprojektbeschreibung \\
+Normalisierung historischer Texte (mit neuronalen Netzen)}
+
+\author{Wenyuan}
+\date{\today}
+
+\usepackage{leipzig}
+\usepackage{gb4e}
+
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\begin{document}
+\maketitle
+
+\section{Einführung}
+
+Die Projektidee stammt aus der kürzlich veröffentlichten Arbeit ''Semi-supervised Contextual Historical Text Normalization'' \cite{makarov-clematide-2020-semi} vom Institut für Computerlinguistik der UZH. Sie schlugen einen neuartigen Ansatz zur automatischen Normalisierung historischer Texte in die Standardvarietät vor und erreichten in realistischen Trainingsszenarien die gleiche Genauigkeit wie die manuelle Textnormalisierung. Das Korpus, das sie für die Experimente verwendeten, besteht aus mehreren Sprachen, und der deutsche Teil davon stammt hauptsächlich aus dem 14. bis 16. Jahrhundert. Eine mögliche Richtung des Projekts könnte die Evaluierung und Ausweitung des Ansatzes auf ältere Sprachen sein, z.B. Kymrisch, Bretonisch. 
+
+\section{Daten (Korpus)}
+
+Die folgende Tabelle zeigt die Details der Datensätze, die in dem von Makarov und Clematide vorgeschlagenen Ansatz verwendet werden. 
+
+\begin{table}
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+        Language & Source Corpus & Time Period & Genre & Tokens (total) & Source of Splits \\ \hline
+        English & [ICAMET] & 1386-1698 & Letters & 188,158 & [HistCorp] \\ \hline
+        German & [Anselm] & 14th-16th c. & Religion & 71,570 & prev. unpublished \\ \hline
+        German & [RIDGES] & 1482-1652 & Science & 71,570 & prev. unpublished \\ \hline
+        Hungarian & [HGDS] & 1440-1541 & Religion & 172,064 & [HistCorp] \\ \hline
+        Icelandic & [IcePaHC] & 15th c. & Religion & 65,267 & [HistCorp] \\ \hline
+        Portuguese & [Post Scriptum] & 15th-19th c. & Letters & 306,946 & prev. unpublished \\ \hline
+        Slovene & [goo300k] & 1750-1899 & Mixed & 326,538 & [KonvNormSl 1.0] \\ \hline
+        Spanish & [Post Scriptum] & 15th-19th c. & Letters & 132,248 & prev. unpublished \\ \hline
+        Swedish & [GaW] & 1527-1812 & Official Records & 65,571 & [HistCorp] \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Aufgabe}
+Eine mögliche Projektausrichtung könnte die Erweiterung des Ansatzes auf die Sprachen wie Kymrisch und Bretonisch, wie von Paul Widmer vorgeschlagen. Allerdings wäre es sehr aufwändig, das dafür benötigte Parallelkorpus zu erstellen, d.h. historische Texte und entsprechende Standardtexte als Gold Standard manuell zu normalisieren. Daher habe ich den Startpunkt des Projekts angepasst:
+\begin{itemize}
+\item einer Liste von Paaren moderner und historischer Wörter (z.B. ein paar Hundert bis Tausend) sammeln und verschiedener Normalisierungsmodelle zur historischen Textnormalisierung ausprobieren \href{https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach}{GitHub}
+\item einen Vergleich mit dem von \cite{makarov-clematide-2020-semi} vorgeschlagenen hauseigenen neuronalen Ansatz machen, der mit wenigen Trainingsdaten gut funktioniert \href{https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021}{GitHub}
+\item (optional) die historische Textnormalisierung über den neuronalen Ansatz durchführen und einen menschlichen SprachwissenschaftlerIn, diese manuell zu korrigieren bitten, um sie auszuwerten.
+\end{itemize}
+
+\section{Ressourcen}
+Ressourcen, die für das Projekt benötigt werden:
+\begin{itemize}
+\item historische Texte (in digitaler Form)
+\item Paare von modernen und historischen Wörtern
+\item einen Linguisten, der die verallgemeinerten modernen Texte begründen und bewerten kann
+\end{itemize}
+
+Sprachen:
+\begin{itemize}
+\item Walisisch 
+\item Bretonisch
+\end{itemize}
+
+\section{Related Work}
+Die oben genannten Ressourcen wurden ursprünglich zusammen mit \cite{bollmann-2019-large} veröffentlicht, außerdem bietet \cite{Bollmann2018} weitere Details und Hintergrundinformationen. \cite{korchagina-2017-normalizing} testete und evaluierte die folgenden drei Ansätze zur Textkanonisierung an historischen deutschen Texten aus dem 15. bis 16. Jahrhundert: regelbasiert, statistische maschinelle Übersetzung und neuronale maschinelle Übersetzung (NMT). Während \cite{hamalainen-etal-2019-revisiting} die NMT-Methoden überprüfte und verschiedene Methoden zur Verbesserung des Normalisierungsprozesses diskutierte. \cite{makarov-clematide-2020-semi} entwickelte neue Ansätze zur semi-supervised kontextualisierten Textnormalisierung.
+
+
+\bibliographystyle{apalike}
+% your bib file should go here 
+\bibliography{references-wenyuan}
+
+\end{document}

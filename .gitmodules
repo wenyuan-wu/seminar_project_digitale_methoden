@@ -1,0 +1,3 @@
+[submodule "norma"]
+	path = norma
+	url = https://github.com/comphist/norma.git

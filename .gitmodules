@@ -1,3 +1,10 @@
 [submodule "norma"]
 	path = norma
 	url = https://github.com/comphist/norma.git
+[submodule "histnorm"]
+	path = histnorm
+	url = https://github.com/coastalcph/histnorm.git
+[submodule "neural_transducer"]
+	path = neural_transducer
+	url = https://github.com/peter-makarov/il-reimplementation.git
+	branch = feature/sgm2021

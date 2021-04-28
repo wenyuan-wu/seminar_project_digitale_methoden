@@ -8,3 +8,15 @@
 	path = neural_transducer
 	url = https://github.com/peter-makarov/il-reimplementation.git
 	branch = feature/sgm2021
+[submodule "marian"]
+	path = marian
+	url = https://github.com/marian-nmt/marian
+[submodule "normalization-NMT"]
+	path = normalization-NMT
+	url = https://github.com/tanggongbo/normalization-NMT.git
+[submodule "xnmt"]
+	path = xnmt
+	url = https://github.com/neulab/xnmt.git
+[submodule "csmtiser"]
+	path = csmtiser
+	url = https://github.com/clarinsi/csmtiser.git

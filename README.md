@@ -54,14 +54,36 @@ docker run -v $(pwd):/home mbollmann/norma -s -c doc/example/example.cfg -f doc/
 [Marian (NMT) for normalization](https://github.com/tanggongbo/normalization-NMT),
   described in [Tang et al. (2018)](http://aclweb.org/anthology/C18-1112)
 
+You need to install the [Marian
+framework](https://github.com/marian-nmt/marian-dev) and clone [the
+normalization-NMT repository](https://github.com/tanggongbo/normalization-NMT)
+on your local machine.  
+
 ### 3. XNMT
 
 [XNMT](https://github.com/neulab/xnmt), following the model of [Bollmann
   (2018)](http://www.linguistics.rub.de/forschung/arbeitsberichte/22.pdf)
 
+XNMT is based on Python 3.6 and DyNet.  You can find detailed instructions on
+how to install it [in the "Getting Started" section of the
+documentation](https://xnmt.readthedocs.io/en/latest/getting_started.html).
+
+
+Examples:
+```commandline
+sudo chmod 666 /var/run/docker.sock
+
+xnmt examples/01_standard.yaml
+```
+
 ### 4. cSMTiser
 
 [cSMTiser](https://github.com/clarinsi/csmtiser) (wrapping Moses)
+
+Using docker image:
+```commandline
+docker run -v $(pwd):/csmtiser greegorey/csmtiser python preprocess.py myconfig.yml
+```
 
 ### 5. Neural Transducer
 

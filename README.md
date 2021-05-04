@@ -94,3 +94,4 @@ described in [Makarov 2020](https://www.aclweb.org/anthology/2020.acl-main.650/)
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)
 
+http://devri.bzh/dictionnaire/a/

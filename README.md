@@ -90,8 +90,16 @@ docker run -v $(pwd):/csmtiser greegorey/csmtiser python preprocess.py myconfig.
 [Neural Transducer](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)
 described in [Makarov 2020](https://www.aclweb.org/anthology/2020.acl-main.650/)
 
+## Devri: The diachronic dictionary of Breton
+http://devri.bzh/dictionnaire/a/
+
+The Devri site was initiated by Martial Menard in spring 2016. It currently offers the diachronic and etymological dictionary of Breton. 
+
+This work has continued since September 2016 under the direction of Herve Le Bihan.
+
+
+
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)
 
-http://devri.bzh/dictionnaire/a/

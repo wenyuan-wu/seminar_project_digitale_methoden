@@ -97,7 +97,10 @@ The Devri site was initiated by Martial Menard in spring 2016. It currently offe
 
 This work has continued since September 2016 under the direction of Herve Le Bihan.
 
-
+- no spelling variants
+- sample: http://devri.bzh/dictionnaire/a/a-abadennou/
+- just one spelling variant
+- only one time span
 
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)

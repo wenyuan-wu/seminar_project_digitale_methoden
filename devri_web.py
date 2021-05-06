@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from requests_cache import CachedSession
 import requests
 from urllib.request import urlopen
+import re
 
 url = "http://devri.bzh/dictionnaire/a/a-abadennou/"
 url_2 = "http://devri.bzh/dictionnaire/a/a-adwezh/"
@@ -17,7 +18,23 @@ session = CachedSession()
 # page = session.get(url_3)
 # timeout works
 page = session.get(url, timeout=5)
-print(page)
+# print(page)
 soup = BeautifulSoup(page.content, 'html.parser')
+# print(list(soup.children))
+# print(soup.prettify())
 
-print(soup.prettify())
+results = soup.find_all('h1', class_='titre-mot')
+
+for i in results:
+    print(i.text)
+
+# bold
+results_n = soup.find_all('b')
+
+for i in results_n:
+    print(i.text)
+
+results_s = soup.find_all('i')
+print(len(results_s))
+for i in results_s:
+    print(i.text)

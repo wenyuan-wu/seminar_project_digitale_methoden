@@ -102,6 +102,17 @@ This work has continued since September 2016 under the direction of Herve Le Bih
 - just one spelling variant
 - only one time span
 
+- multiple variants: 
+http://devri.bzh/dictionnaire/a/a-adwezh/
+  
+a-adwezh
+
+filtered out samples:
+a-bann
+http://devri.bzh/dictionnaire/a/a-bann/
+
+entries (variants) "b" == "i"
+
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)

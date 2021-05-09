@@ -104,8 +104,8 @@ def write_to_csv(entry_list, file_name):
 
 def main():
     page_url_list = get_page_url()
-    entry_url_list = get_entry_url_list(page_url_list[:3])
-    entry_list = get_entry(entry_url_list[:20])
+    entry_url_list = get_entry_url_list(page_url_list)
+    entry_list = get_entry(entry_url_list)
     write_to_csv(entry_list, "data/breton_devri.csv")
 
 

@@ -9,12 +9,12 @@ def get_page_url():
     page_url_list = []
     url = "http://devri.bzh/dictionnaire/a/"
     session = CachedSession()
-    page = session.get(url, timeout=1)
+    page = session.get(url, timeout=2)
     soup = BeautifulSoup(page.content, "html.parser")
     letter_list = soup.find_all("a", class_="enfant")
     for i in tqdm(letter_list):
         url_letter = "http://devri.bzh" + i["href"]
-        page_letter = session.get(url_letter, timeout=1)
+        page_letter = session.get(url_letter, timeout=2)
         soup_letter = BeautifulSoup(page_letter.content, "html.parser")
         page_num = soup_letter.find("li", class_=["MarkupPagerNavLast MarkupPagerNavLastNum", "MarkupPagerNavLastNum"])
         try:
@@ -48,7 +48,7 @@ def get_entry(entry_url_list):
 
 def get_page_content(url):
     session = CachedSession()
-    page = session.get(url, timeout=1)
+    page = session.get(url, timeout=2)
     soup = BeautifulSoup(page.content, "html.parser")
     content = soup.prettify()
     return content
@@ -57,7 +57,7 @@ def get_page_content(url):
 def get_entry_url(url):
     url_list = []
     session = CachedSession()
-    page = session.get(url, timeout=1)
+    page = session.get(url, timeout=2)
     soup = BeautifulSoup(page.content, "html.parser")
 
     entry_url = soup.find_all("li", class_="list-group-item col-md-4")
@@ -70,7 +70,7 @@ def get_entry_url(url):
 def get_entry_content(url):
     entries_list = []
     session = CachedSession()
-    page = session.get(url, timeout=1)
+    page = session.get(url, timeout=2)
     soup = BeautifulSoup(page.content, "html.parser")
 
     # get entry text

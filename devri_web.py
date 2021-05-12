@@ -7,6 +7,7 @@ from tqdm import tqdm
 import re
 import csv
 import time
+import sacrebleu
 
 """
 This script serve the purpose to perform the web scraping to the website http://devri.bzh/, where nearly entire database
@@ -145,15 +146,33 @@ def get_entry_content(url: str) -> [list, None]:
             year = re.findall(r"\([0-9]{4}\)", j.text)
             if year:
                 year = year[0][1:5]
-                entry_list.append(re.sub(r'[^A-Za-z0-9\'-*]+', '', entry))
-                entry_list.append(re.sub(r'[^A-Za-z0-9\'-*]+', '', i.text))
-                entry_list.append(year)
-                entries_list.append(entry_list)
-            else:
-                pass
-    else:
-        return None
+                src = re.sub(r'[^A-Za-z\'-*]+', '', entry)
+                trg = re.sub(r'[^A-Za-z\'-*]+', '', i.text)
+                try:
+                    score = get_char_bleu(src, trg)
+                    if score > 10.0:
+                        entry_list.append(trg)
+                        entry_list.append(src)
+                        entry_list.append(year)
+                        # bleu score as additional information
+                        # entry_list.append(score)
+                        entries_list.append(entry_list)
+                except EOFError:
+                    pass
+
     return entries_list
+
+
+def get_char_bleu(src: str, trg: str) -> float:
+    """
+    Fucntion to calculate character BLEU score
+    :param src: string, source
+    :param trg: string, target
+    :return: float, BLEU score
+    """
+    src = " ".join(src)
+    trg = " ".join(trg)
+    return sacrebleu.sentence_bleu(src, [trg]).score
 
 
 def write_to_csv(entry_list: list, file_name: str) -> None:

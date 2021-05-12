@@ -113,6 +113,10 @@ http://devri.bzh/dictionnaire/a/a-bann/
 
 entries (variants) "b" == "i"
 
+
+## Cached Website data
+[Cached Data](https://mega.nz/file/7PZVAAJa#E1uTlaE0UKj8iSHRq1bMMsVg2vdOCAUkrNuAaSOuo5I)
+
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)

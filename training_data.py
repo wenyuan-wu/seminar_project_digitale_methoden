@@ -12,5 +12,6 @@ train, test = train_test_split(df_raw, test_size=0.2)
 print(len(train))
 print(len(test))
 
+df_raw.to_csv("data/period_7_raw.csv", sep="\t", header=False, index=False)
 train.to_csv("data/period_7_train.csv", sep="\t", header=False, index=False)
 test.to_csv("data/period_7_test.csv", sep="\t", header=False, index=False)

@@ -117,6 +117,22 @@ entries (variants) "b" == "i"
 ## Cached Website data
 [Cached Data](https://mega.nz/file/7PZVAAJa#E1uTlaE0UKj8iSHRq1bMMsVg2vdOCAUkrNuAaSOuo5I)
 
+## Norma training
+Running test
+
+```commandline
+cd histnorm/
+cp examples/norma.cfg ./norma.cfg
+docker run -v $(pwd):/home --entrypoint norma_lexicon mbollmann/norma -w datasets/modern/combined.de.uniq -a lexicon.de.fsm -l lexicon.de.sym -c
+docker run -v $(pwd):/home mbollmann/norma -c norma.cfg -f datasets/historical/german/german-anselm.train.txt -s -t --saveonexit
+docker run -v $(pwd):/home mbollmann/norma -c norma.cfg -f datasets/historical/german/german-anselm.dev.txt -s > german-anselm.predictions
+```
+
+```commandline
+docker run -v $(pwd):/home --entrypoint norma_lexicon mbollmann/norma -w data/period_7_words.txt -a data/period_7.fsm -l data/period_7.sym -c
+
+```
+
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)

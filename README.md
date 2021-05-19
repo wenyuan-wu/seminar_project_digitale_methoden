@@ -133,6 +133,36 @@ docker run -v $(pwd):/home --entrypoint norma_lexicon mbollmann/norma -w data/pe
 
 ```
 
+## Corpus statics
+### Amount of entities
+| Period | Amount |
+| --- | --- |
+| avant 1100 | 0 |
+| 1100 - 1449 | 5 |
+| 1450 - 1559 | 948 |
+| 1600 - 1650 | 481 |
+| 1651 - 1799 | 3253 |
+| 1800 - 1899 | 7711 |
+| 1900 - 1999 | 17522
+| depuis 2000 | 50 |
+| Total | 29832 |
+
+![image](./period_distribution.png)
+
+### Period #7: 17522
+
+| Category | Amount |
+| --- | --- |
+| training | 14017 |
+| test | 3505 |
+| total | 17522 |
+
+- precision score: **0.4253922967189729**
+- average character BLEU score: **57.99106517730871**
+- Character Error Rate (CER): still working
+
+![image](./norma_bleu.png)
+
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)

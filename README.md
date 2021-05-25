@@ -153,12 +153,13 @@ docker run -v $(pwd):/home --entrypoint norma_lexicon mbollmann/norma -w data/pe
 
 | Category | Amount |
 | --- | --- |
-| training | 14017 |
+| training | 10512 |
+| dev | 3505 |
 | test | 3505 |
 | total | 17522 |
 
-- precision score: **0.4253922967189729**
-- average character BLEU score: **57.99106517730871**
+- precision score: **0.374037089871612**
+- average character BLEU score: **54.61071537846034**
 - Character Error Rate (CER): still working
 
 ![image](./norma_bleu.png)

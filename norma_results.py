@@ -4,12 +4,12 @@ from devri_web import get_char_bleu
 import matplotlib.pyplot as plt
 
 col_names_gs = ["hist", "norm"]
-df_gs = pd.read_csv("data/period_7_test.csv", sep="\t", names=col_names_gs)
+df_gs = pd.read_csv("data/period_7_dev.tsv", sep="\t", names=col_names_gs)
 # print(df_gs)
 y_true = df_gs["norm"]
 
 col_names_pred = ["norm", "score"]
-df_pred = pd.read_csv("norma_files/period_7_predictions.csv", sep="\t", names=col_names_pred)
+df_pred = pd.read_csv("norma_files/period_7_dev_results.tsv", sep="\t", names=col_names_pred)
 y_pred = df_pred["norm"]
 # print(df_pred)
 

@@ -158,9 +158,14 @@ docker run -v $(pwd):/home --entrypoint norma_lexicon mbollmann/norma -w data/pe
 | test | 3505 |
 | total | 17522 |
 
-- precision score: **0.374037089871612**
-- average character BLEU score: **54.61071537846034**
-- Character Error Rate (CER): still working
+Norma:
+- average character BLEU score: **54.6107**
+- precision score (word accuracy): **0.3740**
+- Average Character Error Rate (CER): **0.3601**
+
+Marian:
+- precision score (word accuracy): **0.5409**
+- Average Character Error Rate (CER): **0.1884**
 
 ![image](./norma_bleu.png)
 

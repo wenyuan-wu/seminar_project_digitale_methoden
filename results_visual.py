@@ -1,5 +1,10 @@
+import pandas as pd
 import matplotlib.pyplot as plt
 
+df = pd.read_csv('results.csv')
+print(df)
+
+# TODO
 # Plot the figure.
 plt.figure(figsize=(12, 8))
 ax = freq_series.plot(kind='bar')

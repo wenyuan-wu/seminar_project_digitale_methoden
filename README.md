@@ -176,8 +176,7 @@ Marian:
 | Norma | 0.0667 | 0.5963 |
 | cSMTiser | 0.3000 | 0.2700 |
 | Marian | 0.1333 | 0.6386 |
-
-
+| Neural Transducer | 0.2000 | 0.3185 |
 
 
 ## Resources

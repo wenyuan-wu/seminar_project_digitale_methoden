@@ -169,6 +169,17 @@ Marian:
 
 ![image](./norma_bleu.png)
 
+## Results
+
+| Method | Word Accuracy | Average CER |
+| --- | --- | --- |
+| Norma | 0.0667 | 0.5963 |
+| cSMTiser | 0.3000 | 0.2700 |
+| Marian | 0.1333 | 0.6386 |
+
+
+
+
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
 - [Neural transducer baseline](https://github.com/peter-makarov/il-reimplementation/tree/feature/sgm2021)

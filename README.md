@@ -167,8 +167,6 @@ Marian:
 - precision score (word accuracy): **0.5409**
 - Average Character Error Rate (CER): **0.1884**
 
-![image](./norma_bleu.png)
-
 ## Data
 
 | Dataset | Train | Test (Development) | Total |
@@ -192,10 +190,30 @@ Marian:
 
 | Method | Word Accuracy | Average CER |
 | --- | --- | --- |
-| Norma | 0.0667 | 0.5963 |
-| cSMTiser | 0.3000 | 0.2700 |
-| Marian | 0.1333 | 0.6386 |
-| Neural Transducer | 0.2000 | 0.3185 |
+| Norma | 0.0560 | 0.5937 |
+| cSMTiser | 0.4160 | 0.2036 |
+| Marian | 0.2720 | 0.2953 |
+| Neural Transducer | 0.3200 | 0.2208 |
+
+### Tedency
+
+- Word Accuracy
+
+| Method | tiny (150) | small (625) |
+| --- | --- | --- |
+| Norma | 0.0667 | 0.0560 |
+| cSMTiser | 0.3000 | 0.4160 |
+| Marian | 0.1333 | 0.2720 |
+| Neural Transducer | 0.2000 | 0.3200 |
+
+- average CER
+
+| Method | tiny (150) | small (625) |
+| --- | --- | --- |
+| Norma | 0.5963 | 0.5937 |
+| cSMTiser | 0.2700 | 0.2036 |
+| Marian | 0.6386 | 0.2953 |
+| Neural Transducer | 0.3185 | 0.2208 |
 
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)

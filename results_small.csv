@@ -1,0 +1,5 @@
+﻿Method,Word Accuracy,Average CER
+Norma,0.0560,0.5937
+cSMTiser,0.4160,0.2036
+Marian,0.2720,0.2953
+Neural Transducer,0.3200,0.2208

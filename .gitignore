@@ -3,6 +3,7 @@ venv/
 __pycache__/
 marian_files/
 marian_files_tiny/
+marian_preprocessed/
 marian_preprocessed_tiny/
 norma_files/
 norma_files_tiny/

@@ -169,7 +169,17 @@ Marian:
 
 ![image](./norma_bleu.png)
 
+## Data
+
+| Dataset | Train | Test (Development) | Total |
+| --- | --- | --- | --- |
+| Breton_tiny | 120 | 30 | 150 |
+| Breton_small | 500 | 125 | 625 |
+
+
 ## Results
+
+### Breton_tiny
 
 | Method | Word Accuracy | Average CER |
 | --- | --- | --- |
@@ -178,6 +188,14 @@ Marian:
 | Marian | 0.1333 | 0.6386 |
 | Neural Transducer | 0.2000 | 0.3185 |
 
+### Breton_small
+
+| Method | Word Accuracy | Average CER |
+| --- | --- | --- |
+| Norma | 0.0667 | 0.5963 |
+| cSMTiser | 0.3000 | 0.2700 |
+| Marian | 0.1333 | 0.6386 |
+| Neural Transducer | 0.2000 | 0.3185 |
 
 ## Resources
 - [Historical Text Normalization](https://github.com/coastalcph/histnorm#tldr-the-recommended-normalization-approach)
